@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "ValidaThor",
+    "description": "Validate HTML code according W3C standards.",
+    "version": "0.0.1",
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_icon": {
+            "16": "images/icons8-thor-hammer-16.png",
+            "32": "images/icons8-thor-hammer-32.png",
+            "48": "images/icons8-thor-hammer-48.png",
+            "128": "images/icons8-thor-hammer-128.png"
+        }
+    },
+    "icons": {
+        "16": "images/icons8-thor-hammer-16.png",
+        "32": "images/icons8-thor-hammer-32.png",
+        "48": "images/icons8-thor-hammer-48.png",
+        "128": "images/icons8-thor-hammer-128.png"
+    },
+    "permissions": ["activeTab"],
+    "commands": {
+        "_execute_action": {
+            "suggested_key": {
+                "default": "Ctrl+B",
+                "mac": "Command+B"
+            }
+        }
+    }
+}

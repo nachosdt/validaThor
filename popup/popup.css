@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none !important;
+}
+
+/* ::-webkit-scrollbar-button {
+    display: none !important;
+} */
+
+body {
+    width: 300px;
+    background: #fff;
+    color: #000;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.title {
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#result {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 1;
+}
+
+div[class^="validation"] {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+div[class^="validation"]:first-child {
+    background-color: rgba(255, 0, 0, 0.7);
+}
+
+div[class^="validation"]:first-child:hover {
+    background-color: rgba(255, 0, 0, 0.8);
+}
+
+div[class^="validation"]:nth-child(2) {
+    background-color: rgba(255, 166, 0, 0.7);
+}
+
+div[class^="validation"]:nth-child(2):hover {
+    background-color: rgba(255, 166, 0, 0.8);
+}
+
+div[class^="validation"]:last-child {
+    background-color: rgba(0, 128, 0, 0.7);
+}
+
+div[class^="validation"]:last-child:hover {
+    background-color: rgba(0, 128, 0, 0.8);
+}
+
+p.subtitle {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+p[class^="number"] {
+    font-weight: bold;
+    font-size: 28px;
+}
+
+#btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: rgba(151, 151, 151, 0.7);
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#btn > span {
+    font-size: 20px;
+}
+
+#btn:hover {
+    background-color: rgba(151, 151, 151, 0.8);
+}
+
+#messages-table {
+    display: none;
+    width: 100%;
+    border-collapse: collapse;
+    overflow: scroll;
+}
+
+#messages-table.error,
+#messages-table.warning,
+#messages-table.info {
+    display: table;
+}
+
+#messages-table col:first-child {
+    width: 25%;
+}
+
+#messages-table col:nth-child(2) {
+    width: 75%;
+}
+
+#messages-table td,
+#messages-table th {
+    padding: 10px;
+    text-align: center;
+}
+
+#messages-table th {
+    color: #fff;
+}
+
+#messages-table.error tr:nth-child(even) {
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+#messages-table.error tr:nth-child(odd) {
+    background-color: rgba(255, 0, 0, 0.3);
+}
+
+#messages-table.error th {
+    background-color: rgba(255, 0, 0, 0.7);
+}
+
+#messages-table.warning tr:nth-child(even) {
+    background-color: rgba(255, 166, 0, 0.1);
+}
+
+#messages-table.warning tr:nth-child(odd) {
+    background-color: rgba(255, 166, 0, 0.3);
+}
+
+#messages-table.warning th {
+    background-color: rgba(255, 166, 0, 0.7);
+}
+
+#messages-table.info tr:nth-child(even) {
+    background-color: rgba(0, 128, 0, 0.1);
+}
+
+#messages-table.info tr:nth-child(odd) {
+    background-color: rgba(0, 128, 0, 0.3);
+}
+
+#messages-table.info th {
+    background-color: rgba(0, 128, 0, 0.7);
+}
+
+#messages-table .code {
+    font-family: monospace;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#error-message {
+    display: none;
+    padding: 20px;
+}
+
+#error-message p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    color: red;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="popup.css" />
+        <script src="popup.js" defer></script>
+    </head>
+    <body>
+        <h4 class="title">W3C Markup Validation</h4>
+        <section id="result">
+            <div class="validation-errors" data-index="0">
+                <p class="subtitle">ERRORS</p>
+                <p class="number-errors">.</p>
+            </div>
+            <div class="validation-warnings" data-index="1">
+                <p class="subtitle">WARNINGS</p>
+                <p class="number-warnings">.</p>
+            </div>
+            <div class="validation-infos" data-index="2">
+                <p class="subtitle">INFO</p>
+                <p class="number-infos">.</p>
+            </div>
+        </section>
+        <div>
+            <button id="btn">
+                Full details
+                <span class="material-icons-outlined"> open_in_new </span>
+            </button>
+        </div>
+        <table id="messages-table">
+            <colgroup>
+                <col />
+                <col />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Line</th>
+                    <th>Message</th>
+                </tr>
+            </thead>
+            <tbody id="messages"></tbody>
+        </table>
+        <div id="error-message">
+            <p>
+                <span class="material-icons-outlined"> error </span>
+                Oops! The page couldn't be validated.
+            </p>
+        </div>
+    </body>
+</html>
